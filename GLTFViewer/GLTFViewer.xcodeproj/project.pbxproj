@@ -72,7 +72,7 @@
 		83850FC61F4A5F2600F9A444 /* GLTFViewerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GLTFViewerViewController.h; path = Shared/GLTFViewerViewController.h; sourceTree = "<group>"; };
 		83850FC81F4A616E00F9A444 /* GLTFDocument.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GLTFDocument.h; sourceTree = "<group>"; };
 		83850FC91F4A616E00F9A444 /* GLTFDocument.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GLTFDocument.m; sourceTree = "<group>"; };
-		83850FF61F4A714600F9A444 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
+		83850FF61F4A714600F9A444 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		83A6C5191F88208E0095A4DC /* GLTFViewerCamera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GLTFViewerCamera.h; path = Shared/GLTFViewerCamera.h; sourceTree = "<group>"; };
 		83A6C51A1F88208E0095A4DC /* GLTFViewerCamera.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = GLTFViewerCamera.m; path = Shared/GLTFViewerCamera.m; sourceTree = "<group>"; };
 		83A6C51C1F882DA40095A4DC /* HIToolboxEvents.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = HIToolboxEvents.h; path = Shared/HIToolboxEvents.h; sourceTree = "<group>"; };
@@ -126,21 +126,13 @@
 			isa = PBXGroup;
 			children = (
 				83850FBA1F4A5C5C00F9A444 /* Assets.xcassets */,
-				83850FF41F4A714600F9A444 /* Base.lproj */,
+				83850FF51F4A714600F9A444 /* Main.storyboard */,
 				83850FBD1F4A5C5C00F9A444 /* Info.plist */,
 				83850FC81F4A616E00F9A444 /* GLTFDocument.h */,
 				83850FC91F4A616E00F9A444 /* GLTFDocument.m */,
 				83850FBE1F4A5C5C00F9A444 /* main.m */,
 			);
 			path = macOS;
-			sourceTree = "<group>";
-		};
-		83850FF41F4A714600F9A444 /* Base.lproj */ = {
-			isa = PBXGroup;
-			children = (
-				83850FF51F4A714600F9A444 /* Main.storyboard */,
-			);
-			path = Base.lproj;
 			sourceTree = "<group>";
 		};
 		83D32B1C1FA915D000703763 /* Resources */ = {
@@ -260,7 +252,7 @@
 			};
 			buildConfigurationList = 83D6FFDE1F48BE6200F71E0C /* Build configuration list for PBXProject "GLTFViewer" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
