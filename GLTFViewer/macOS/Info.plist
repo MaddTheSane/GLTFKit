@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
-	<string>en</string>
+	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDocumentTypes</key>
 	<array>
 		<dict>
@@ -13,6 +13,10 @@
 			</array>
 			<key>CFBundleTypeIconFile</key>
 			<string></string>
+			<key>CFBundleTypeMIMETypes</key>
+			<array>
+				<string>model/gltf+json</string>
+			</array>
 			<key>CFBundleTypeName</key>
 			<string>glTF</string>
 			<key>CFBundleTypeOSTypes</key>
@@ -21,6 +25,10 @@
 			</array>
 			<key>CFBundleTypeRole</key>
 			<string>Viewer</string>
+			<key>LSItemContentTypes</key>
+			<array>
+				<string>org.khronos.gltf</string>
+			</array>
 			<key>NSDocumentClass</key>
 			<string>GLTFDocument</string>
 		</dict>
@@ -29,10 +37,18 @@
 			<array>
 				<string>glb</string>
 			</array>
+			<key>CFBundleTypeMIMETypes</key>
+			<array>
+				<string>model/gltf-binary</string>
+			</array>
 			<key>CFBundleTypeName</key>
 			<string>glTF (Binary)</string>
 			<key>CFBundleTypeRole</key>
 			<string>Viewer</string>
+			<key>LSItemContentTypes</key>
+			<array>
+				<string>org.khronos.gltfbinary</string>
+			</array>
 			<key>NSDocumentClass</key>
 			<string>GLTFDocument</string>
 		</dict>
@@ -64,6 +80,10 @@
 	<key>UTImportedTypeDeclarations</key>
 	<array>
 		<dict>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>public.data</string>
+			</array>
 			<key>UTTypeDescription</key>
 			<string>glTF</string>
 			<key>UTTypeIdentifier</key>
@@ -81,10 +101,14 @@
 			</dict>
 		</dict>
 		<dict>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>public.data</string>
+			</array>
 			<key>UTTypeDescription</key>
 			<string>glTF (Binary)</string>
 			<key>UTTypeIdentifier</key>
-			<string>org.khronos.gltf</string>
+			<string>org.khronos.gltfbinary</string>
 			<key>UTTypeTagSpecification</key>
 			<dict>
 				<key>public.filename-extension</key>
