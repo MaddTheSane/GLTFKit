@@ -16,8 +16,10 @@
 
 @import Foundation;
 
-extern NSString *const GLTFExtensionKHRMaterialsPBRSpecularGlossiness;
-extern NSString *const GLTFExtensionKHRLights;
-extern NSString *const GLTFExtensionKHRMaterialsUnlit;
-extern NSString *const GLTFExtensionKHRTextureTransform;
-extern NSString *const GLTFExtensionEXTPBRAttributes;
+typedef NSString *GLTFExtensionName NS_TYPED_EXTENSIBLE_ENUM;
+
+extern GLTFExtensionName const GLTFExtensionKHRMaterialsPBRSpecularGlossiness;
+extern GLTFExtensionName const GLTFExtensionKHRLights;
+extern GLTFExtensionName const GLTFExtensionKHRMaterialsUnlit;
+extern GLTFExtensionName const GLTFExtensionKHRTextureTransform;
+extern GLTFExtensionName const GLTFExtensionEXTPBRAttributes;

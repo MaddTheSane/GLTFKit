@@ -23,7 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly) NSInteger length;
 
 /// The actual data associated with this buffer. If uri is a data URI, this is populated when loading; else it is nil
-@property (nonatomic, readonly) void *contents;
+@property (nonatomic, readonly) void *contents NS_RETURNS_INNER_POINTER;
 
 @end
 

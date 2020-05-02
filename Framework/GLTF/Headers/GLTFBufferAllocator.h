@@ -20,8 +20,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@protocol GLTFBufferAllocator
-+ (uint64_t)liveAllocationSize;
+@protocol GLTFBufferAllocator <NSObject>
+@property (class, readonly) uint64_t liveAllocationSize;
 - (id<GLTFBuffer>)newBufferWithLength:(NSInteger)length;
 - (id<GLTFBuffer>)newBufferWithData:(NSData *)data;
 @end

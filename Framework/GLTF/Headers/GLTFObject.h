@@ -16,6 +16,8 @@
 
 @import Foundation;
 
+#import "GLTFExtensionNames.h"
+
 NS_ASSUME_NONNULL_BEGIN
 
 @protocol GLTFObject <NSObject>
@@ -23,7 +25,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// The user-defined name of this object. Need not be unique.
 @property (nonatomic, copy) NSString * _Nullable name;
 /// Data specific to any extensions used in this document
-@property (nonatomic, copy) NSDictionary *extensions;
+@property (nonatomic, copy) NSDictionary<GLTFExtensionName,id> *extensions;
 /// Contains application-specific information that is passed through but not parsed
 @property (nonatomic, copy) NSDictionary *extras;
 
@@ -36,7 +38,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// The user-defined name of this object. Need not be unique.
 @property (nonatomic, copy) NSString * _Nullable name;
 /// Data specific to any extensions used in this document
-@property (nonatomic, copy) NSDictionary *extensions;
+@property (nonatomic, copy) NSDictionary<GLTFExtensionName,id> *extensions;
 /// Contains application-specific information that is passed through but not parsed
 @property (nonatomic, copy) NSDictionary *extras;
 
