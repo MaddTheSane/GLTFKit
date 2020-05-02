@@ -75,7 +75,7 @@ MTLBlendFactor GLTFBlendFactorForBlendEquation(GLTFBlendEquation e) {
         case GLTFBlendEquationOneMinusConstAlpha:
             return MTLBlendFactorOneMinusDestinationColor;
         default:
-            NSLog(@"Unsupported blend equation %d", (int)e);
+            NSLog(@"Unsupported blend equation %ld", (long)e);
             return MTLBlendFactorOne;
     }
 }
@@ -97,7 +97,7 @@ MTLCompareFunction GLTFMTLCompareFunctionForComparisonFunc(GLTFComparisonFunc f)
         case GLTFComparisonFuncGreaterEqual:
             return MTLCompareFunctionGreaterEqual;
         default:
-            NSLog(@"Unsupported comparison function %d", (int)f);
+            NSLog(@"Unsupported comparison function %ld", (long)f);
             return MTLCompareFunctionLess;
     }
 }

@@ -19,7 +19,7 @@
 
 @import simd;
 
-typedef struct {
+typedef struct GLTFTextureTransform {
     simd_float2 offset;
     simd_float2 scale;
     float rotation;
