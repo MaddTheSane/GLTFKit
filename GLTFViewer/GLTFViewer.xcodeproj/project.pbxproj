@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -236,7 +236,7 @@
 		83D6FFDB1F48BE6200F71E0C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Warren Moore";
 				TargetAttributes = {
 					83D6FFE21F48BE6200F71E0C = {
@@ -251,7 +251,7 @@
 				};
 			};
 			buildConfigurationList = 83D6FFDE1F48BE6200F71E0C /* Build configuration list for PBXProject "GLTFViewer" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
