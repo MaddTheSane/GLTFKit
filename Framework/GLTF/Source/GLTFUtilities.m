@@ -133,9 +133,9 @@ simd_float4x4 GLTFRotationMatrixFromAxisAngle(simd_float3 axis, float angle) {
     return (simd_float4x4){ c0, c1, c2, c3 };
 }
 
-simd_float3 GLTFAxisX = (simd_float3){ 1, 0, 0 };
-simd_float3 GLTFAxisY = (simd_float3){ 0, 1, 0 };
-simd_float3 GLTFAxisZ = (simd_float3){ 0, 0, 1 };
+const simd_float3 GLTFAxisX = (simd_float3){ 1, 0, 0 };
+const simd_float3 GLTFAxisY = (simd_float3){ 0, 1, 0 };
+const simd_float3 GLTFAxisZ = (simd_float3){ 0, 0, 1 };
 
 simd_float3x3 GLTFMatrixUpperLeft3x3(simd_float4x4 m) {
     simd_float3x3 mout = { {

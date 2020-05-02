@@ -18,7 +18,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@protocol GLTFObject
+@protocol GLTFObject <NSObject>
 
 /// The user-defined name of this object. Need not be unique.
 @property (nonatomic, copy) NSString * _Nullable name;

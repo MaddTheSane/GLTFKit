@@ -26,7 +26,7 @@ NS_ASSUME_NONNULL_BEGIN
 @class GLTFKHRLight;
 @protocol GLTFBufferAllocator;
 
-@protocol GLTFAssetLoadingDelegate
+@protocol GLTFAssetLoadingDelegate <NSObject>
 - (void)assetWithURL:(NSURL *)assetURL requiresContentsOfURL:(NSURL *)url completionHandler:(void (^)(NSData *_Nullable, NSError *_Nullable))completionHandler;
 - (void)assetWithURL:(NSURL *)assetURL didFinishLoading:(GLTFAsset *)asset;
 - (void)assetWithURL:(NSURL *)assetURL didFailToLoadWithError:(NSError *)error;

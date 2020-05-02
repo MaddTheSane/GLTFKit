@@ -23,7 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @class GLTFBufferView;
 
-typedef struct {
+typedef struct GLTFValueRange {
     float minValue[16];
     float maxValue[16];
 } GLTFValueRange;

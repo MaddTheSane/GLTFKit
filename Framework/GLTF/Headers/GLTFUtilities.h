@@ -21,26 +21,26 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef struct __attribute__((packed)) {
+typedef struct __attribute__((packed)) GLTFVector3 {
     float x, y, z;
 } GLTFVector3;
 
-typedef struct __attribute__((packed)) {
+typedef struct __attribute__((packed)) GLTFVector4 {
     float x, y, z, w;
 } GLTFVector4;
 
-typedef struct __attribute__((packed)) {
+typedef struct __attribute__((packed)) GLTFMatrix4 {
     GLTFVector4 columns[4];
 } GLTFMatrix4;
 
 typedef simd_quatf GLTFQuaternion;
 
-typedef struct {
+typedef struct GLTFBoundingBox {
     simd_float3 minPoint;
     simd_float3 maxPoint;
 } GLTFBoundingBox;
 
-typedef struct {
+typedef struct GLTFBoundingSphere {
     simd_float3 center;
     float radius;
 } GLTFBoundingSphere;
@@ -69,9 +69,9 @@ extern simd_float4x4 GLTFNormalMatrixFromModelMatrix(simd_float4x4);
 
 extern simd_float4x4 GLTFPerspectiveProjectionMatrixAspectFovRH(const float fovY, const float aspect, const float nearZ, const float farZ);
 
-extern simd_float3 GLTFAxisX;
-extern simd_float3 GLTFAxisY;
-extern simd_float3 GLTFAxisZ;
+extern const simd_float3 GLTFAxisX;
+extern const simd_float3 GLTFAxisY;
+extern const simd_float3 GLTFAxisZ;
 
 extern GLTFDataDimension GLTFDataDimensionForName(NSString *name);
 
