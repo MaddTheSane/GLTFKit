@@ -16,15 +16,15 @@
 
 @import Foundation;
 
-extern const UInt32 GLTFBinaryMagic;
+extern const OSType GLTFBinaryMagic;
 
-typedef NS_ENUM(UInt32, GLTFChunkType) {
+typedef NS_ENUM(OSType, GLTFChunkType) {
     GLTFChunkTypeJSON   = 0x4E4F534A,
     GLTFChunkTypeBinary = 0x004E4942
 };
 
 typedef struct GLTFBinaryHeader {
-    UInt32 magic;
+    OSType magic;
     UInt32 version;
     UInt32 length;
 } GLTFBinaryHeader;

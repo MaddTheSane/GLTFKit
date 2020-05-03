@@ -21,5 +21,6 @@
 
 @interface GLTFSCNDocument : NSDocument
 @property (nonatomic, strong) GLTFAsset *asset;
+- (IBAction)exportAsScene:(id)sender;
 @end
 

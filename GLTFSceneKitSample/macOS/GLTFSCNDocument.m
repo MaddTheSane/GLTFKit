@@ -26,7 +26,7 @@
 
 - (void)makeWindowControllers {
     NSRect contentsRect = NSMakeRect(0, 0, 800, 600);
-    NSWindowStyleMask styleMask = NSWindowStyleMaskTitled | NSWindowStyleMaskClosable | NSWindowStyleMaskMiniaturizable | NSWindowStyleMaskResizable;
+    const NSWindowStyleMask styleMask = NSWindowStyleMaskTitled | NSWindowStyleMaskClosable | NSWindowStyleMaskMiniaturizable | NSWindowStyleMaskResizable;
     NSWindow *window = [[NSWindow alloc] initWithContentRect:contentsRect styleMask:styleMask backing:NSBackingStoreBuffered defer:NO];
     
     GLTFSCNViewController *viewController = [[GLTFSCNViewController alloc] init];
@@ -67,6 +67,25 @@
 
 + (BOOL)autosavesInPlace {
     return YES;
+}
+
+- (IBAction)exportAsScene:(id)sender
+{
+    NSSavePanel *panel = [NSSavePanel savePanel];
+    panel.allowedFileTypes = @[@"com.apple.scenekit.scene"];
+    panel.nameFieldStringValue = self.fileURL.lastPathComponent.stringByDeletingPathExtension;
+    panel.directoryURL = self.fileURL.URLByDeletingLastPathComponent;
+    
+    [panel beginSheetModalForWindow:self.windowForSheet completionHandler:^(NSModalResponse result) {
+        if (result != NSModalResponseOK) {
+            return;
+        }
+        GLTFSCNAsset *oldAsset = [SCNScene assetFromGLTFAsset:self.asset options:@{}];
+        SCNScene *scene = oldAsset.defaultScene /*self.viewerController.scene*/;
+        [scene writeToURL:panel.URL options:nil delegate:nil progressHandler:^(float totalProgress, NSError * _Nullable error, BOOL * _Nonnull stop) {
+            
+        }];
+    }];
 }
 
 @end

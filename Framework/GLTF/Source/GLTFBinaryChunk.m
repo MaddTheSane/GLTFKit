@@ -16,7 +16,7 @@
 
 #import "GLTFBinaryChunk.h"
 
-const UInt32 GLTFBinaryMagic = 0x46546C67;
+const OSType GLTFBinaryMagic = 0x46546C67;
 
 @implementation GLTFBinaryChunk
 @end
