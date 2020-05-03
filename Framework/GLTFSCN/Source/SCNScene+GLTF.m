@@ -206,7 +206,7 @@ static SCNMatrix4 GLTFSCNContentsTransformFromTextureTransform(GLTFTextureTransf
         // generate camera and add to node
     }
     
-    if (@available(iOS 11.0, *)) {
+    if (@available(iOS 11.0, macos 10.13, tvos 11.0, *)) {
         scnNode.simdTransform = node.localTransform;
     } else {
         scnNode.transform = SCNMatrix4FromMat4(node.localTransform);

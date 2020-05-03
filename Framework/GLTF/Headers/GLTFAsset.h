@@ -18,6 +18,7 @@
 
 #import "GLTFObject.h"
 #import "GLTFEnums.h"
+#import "GLTFExtensionNames.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -47,7 +48,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString * _Nullable copyright;
 @property (nonatomic, copy) NSString * _Nullable formatVersion;
 
-@property (nonatomic, copy) NSArray<NSString *> *extensionsUsed;
+@property (nonatomic, copy) NSArray<GLTFExtensionName> *extensionsUsed;
 
 /// Load an asset asynchronously. The asset may either be a local asset or a remote asset; the provided
 /// delegate will receive callbacks requesting the contents of remote URLs referenced by the asset. These
