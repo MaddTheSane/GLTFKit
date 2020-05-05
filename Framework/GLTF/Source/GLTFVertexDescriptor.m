@@ -35,8 +35,8 @@ NSString *const GLTFAttributeSemanticMetallic  = @"METALLIC";
 @implementation GLTFVertexAttribute
 
 - (NSString *)description {
-    return [NSString stringWithFormat:@"GLTFVertexAttribute: component type: %d, count: %d, offset %d [[%@]]",
-            (int)self.componentType, (int)self.dimension, (int)self.offset, self.semantic];
+    return [NSString stringWithFormat:@"GLTFVertexAttribute: component type: %ld, count: %ld, offset %ld [[%@]]",
+            (long)self.componentType, (long)self.dimension, (long)self.offset, self.semantic];
 }
 
 @end

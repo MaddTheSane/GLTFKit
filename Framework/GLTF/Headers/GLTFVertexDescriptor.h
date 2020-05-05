@@ -22,21 +22,23 @@ NS_ASSUME_NONNULL_BEGIN
 extern const NSInteger GLTFVertexDescriptorMaxAttributeCount;
 extern const NSInteger GLTFVertexDescriptorMaxBufferLayoutCount;
 
-extern NSString *const GLTFAttributeSemanticPosition;
-extern NSString *const GLTFAttributeSemanticTangent;
-extern NSString *const GLTFAttributeSemanticNormal;
-extern NSString *const GLTFAttributeSemanticTexCoord0;
-extern NSString *const GLTFAttributeSemanticTexCoord1;
-extern NSString *const GLTFAttributeSemanticColor0;
-extern NSString *const GLTFAttributeSemanticJoints0;
-extern NSString *const GLTFAttributeSemanticJoints1;
-extern NSString *const GLTFAttributeSemanticWeights0;
-extern NSString *const GLTFAttributeSemanticWeights1;
-extern NSString *const GLTFAttributeSemanticRoughness;
-extern NSString *const GLTFAttributeSemanticMetallic;
+typedef NSString *GLTFAttributeSemantic NS_TYPED_ENUM;
+
+extern GLTFAttributeSemantic const GLTFAttributeSemanticPosition;
+extern GLTFAttributeSemantic const GLTFAttributeSemanticTangent;
+extern GLTFAttributeSemantic const GLTFAttributeSemanticNormal;
+extern GLTFAttributeSemantic const GLTFAttributeSemanticTexCoord0;
+extern GLTFAttributeSemantic const GLTFAttributeSemanticTexCoord1;
+extern GLTFAttributeSemantic const GLTFAttributeSemanticColor0;
+extern GLTFAttributeSemantic const GLTFAttributeSemanticJoints0;
+extern GLTFAttributeSemantic const GLTFAttributeSemanticJoints1;
+extern GLTFAttributeSemantic const GLTFAttributeSemanticWeights0;
+extern GLTFAttributeSemantic const GLTFAttributeSemanticWeights1;
+extern GLTFAttributeSemantic const GLTFAttributeSemanticRoughness;
+extern GLTFAttributeSemantic const GLTFAttributeSemanticMetallic;
 
 @interface GLTFVertexAttribute : NSObject
-@property (nonatomic, copy) NSString *semantic;
+@property (nonatomic, copy) GLTFAttributeSemantic semantic;
 @property (nonatomic, assign) GLTFDataType componentType;
 @property (nonatomic, assign) GLTFDataDimension dimension;
 @property (nonatomic, assign) NSInteger offset;

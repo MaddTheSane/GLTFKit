@@ -159,13 +159,19 @@ unsigned char *GLTFMTLConvertImageToRGBA8U(CGImageRef image)
         return nil;
     }
 
-    NSData *data = [NSData dataWithContentsOfURL:url];
+    NSData *data = [NSData dataWithContentsOfURL:url options:0 error:error];
 
+    if (!data) {
+        return nil;
+    }
     return [self newTextureWithData:data options:options error:error];
 }
 
 - (id<MTLTexture>)newTextureWithData:(NSData *)data options:(NSDictionary *)options error:(NSError **)error {
     if (data == nil) {
+        if (error) {
+            *error = [NSError errorWithDomain:NSCocoaErrorDomain code:NSFileReadNoSuchFileError userInfo:nil];
+        }
         return nil;
     }
     

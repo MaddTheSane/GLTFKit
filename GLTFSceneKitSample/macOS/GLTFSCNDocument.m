@@ -17,7 +17,7 @@
 #import "GLTFSCNDocument.h"
 #import "GLTFSCNViewController.h"
 
-@interface GLTFSCNDocument()
+@interface GLTFSCNDocument() <SCNSceneExportDelegate>
 @property (nonatomic, strong) GLTFSCNViewController *viewerController;
 @property (nonatomic, strong) id<GLTFBufferAllocator> bufferAllocator;
 @end
@@ -81,11 +81,17 @@
             return;
         }
         GLTFSCNAsset *oldAsset = [SCNScene assetFromGLTFAsset:self.asset options:@{}];
-        SCNScene *scene = oldAsset.defaultScene /*self.viewerController.scene*/;
-        [scene writeToURL:panel.URL options:nil delegate:nil progressHandler:^(float totalProgress, NSError * _Nullable error, BOOL * _Nonnull stop) {
+        SCNScene *scene = oldAsset.defaultScene;
+        [scene writeToURL:panel.URL options:nil delegate:self progressHandler:^(float totalProgress, NSError * _Nullable error, BOOL * _Nonnull stop) {
             
         }];
     }];
+}
+
+- (nullable NSURL *)writeImage:(NSImage *)image withSceneDocumentURL:(NSURL *)documentURL originalImageURL:(nullable NSURL *)originalImageURL
+{
+    NSLog(@"%@, %@, %@",image, documentURL, originalImageURL);
+    return nil;
 }
 
 @end
